@@ -1,0 +1,57 @@
+*{margin:0;
+padding:0;}
+
+.sky{width:100%;
+	height:100vh;
+    position:relative;
+    background:#ADD8E6;
+    overflow-x:hidden;
+}
+.mountains{position: absolute;
+bottom:0;
+height:120px;
+right:0;
+left:-2000px;
+width:500%;
+background-image:url(mountains2.png);
+background-repeat:repeat-x;
+animation:mountains 15s linear infinite;}
+@keyframes mountains{
+	100%{
+		transform:translateX(2000px);
+	}
+}
+.clouds{
+	position:absolute;
+	top:30px;
+	height:80px;
+	right:0;
+	left:-2000px;
+	width:500%;
+	background-image:url(clouds.png);
+	background-repeat:repeat-x;
+	animation:clouds 15s linear infinite;
+}
+@keyframes clouds{
+	100%{
+		transform:translateX(2000px);
+	}
+}
+.aeroplane{
+	top:140px;
+	left:40%;
+	position:absolute;
+	z-index:2;
+	animation:plane 2s linear infinite;
+}
+@keyframes plane{
+0%{
+	transform:translate(2px,2px);
+}
+50%{
+	transform:translate(-2px,-2px);
+}
+100%{
+	transform:translate(2px,2px);
+}
+}
